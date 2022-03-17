@@ -82,6 +82,8 @@ header {
     
     border-radius: 6px;
     border: 1px solid #f2f45a;
+
+    cursor: pointer;
 }
 
 .resultSearch {
