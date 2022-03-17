@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Francielle Zucolota Curriculum</title>
+    <link href="./main.css" rel="stylesheet" />
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+    <script type="text/babel">
+
+
+        const Page = ({ children }) => (
+            <main>
+                {children}
+            </main>
+        )
+
+        const Header = () => (
+            <header>
+                <h1 className='titleHeader'>CONTACTS</h1>
+                <button type='button' className='buttonSearch'>Search</button>
+            </header>
+        )
+
+        const Content = ({ children }) => (
+            <section>
+                {children}
+            </section>
+        )
+
+        const CardUser = ({ img, name, jobPosition }) => (
+            <div className='cardUser'>
+                <UserInfo img={img} name={name} jobPosition={jobPosition} />
+                <div>
+                    <ButtonAction text={'Call'} />
+                    <ButtonAction text={'Send e-mail'} />
+                </div>
+            </div>
+        )
+
+        const UserInfo = ({ img, name, jobPosition }) => (
+            <div className='userInfoAll'>
+                <img src={img} className='photoUser' />
+                <div className='userInfo'>
+                    <h1> {name}</h1>
+                    <h3> {jobPosition}</h3>
+                </div>
+            </div>
+
+        )
+
+        const ButtonAction = ({ text }) => (
+            <button type='button' className='buttonAction'>{text}</button>
+
+        )
+
+        //element+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+        const element = (
+
+            <Page>
+                <Header />
+                <Content>
+                    <CardUser img={'https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg'} 
+                    name='Tom James' 
+                    jobPosition='Programmer' />
+                    
+                    <CardUser img={'https://img.freepik.com/fotos-gratis/menina-com-vestido-de-verao-rosa-gosta-de-perfume-de-flores-e-ri-sinceramente-aproveitando-o-otimo-dia-de-primavera_197531-10011.jpg?size=626&ext=jpg'} 
+                    name='Alessa Smith' 
+                    jobPosition='Manager' />
+                    
+                    <CardUser img={'https://img.freepik.com/fotos-gratis/foto-da-cintura-para-cima-de-uma-mulher-tenra-feminina-e-gentil-com-penteado-encaracolado-penteado-para-o-lado-direito-inclinando-a-cabeca-e-sorrindo-sedutor-tornando-o-olhar-romantico-para-a-camera-se-abracando-sobre-o-fundo-amarelo_1258-81987.jpg'} 
+                    name='Kate Minard' 
+                    jobPosition='Web Designer' />
+                    
+                    <CardUser img={'https://img.freepik.com/fotos-gratis/um-homem-barbudo-de-olhos-azuis-feliz-com-tatuagens-corte-de-cabelo-curto-da-moda-e-camiseta-amarela-parecendo-alegre-com-olhos-arregalados-e-boca-aberta-isolado-no-roxo_295783-7215.jpg'} 
+                    name='John Tutor' 
+                    jobPosition='Database Admin' />
+                    <label className='resultSearch'>We found 23 contacts.</label>
+                </Content>
+            </Page>
+        )
+
+        ReactDOM.render(element, document.getElementById('root'))
+
+    </script>
+</body>
+
+</html>

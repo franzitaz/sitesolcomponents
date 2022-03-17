@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    background-color: #4d77ff;
+}
+
+main {
+    padding: 24px 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.titleHeader {
+    color: #f2f45a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttonSearch {
+    color: rgb(118,118,118);
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    background-color: #f2f45a;
+    border: 0;
+    border-radius: 48px;
+    padding: 7px 95px;
+}
+
+.cardUser {
+    background-color: #56bbf1;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    padding: 8px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photoUser {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+
+    border-radius: 100%;
+}
+
+.userInfoAll {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo {
+    margin: 0 0 0 24px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.userInfo h1 {
+    color: #f1e1a6;
+    font-weight: 100;
+}
+
+.userInfo h3 {
+    color: #f4bbbb;
+}
+
+.buttonAction{
+    background-color: turquoise;
+    color: #f2f45a;
+
+    margin: 0 0 0 10px;
+    padding: 8px 8px;
+    
+    border-radius: 6px;
+    border: 1px solid #f2f45a;
+}
+
+.resultSearch {
+    color: #f2f45a;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif
+}
+    
+    
+    
