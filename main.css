@@ -4,7 +4,6 @@
 }
 
 body {
-    background-color: rgb(245, 245, 245);
     background-color: #4d77ff;
 }
 
@@ -32,6 +31,8 @@ header {
     border: 0;
     border-radius: 48px;
     padding: 7px 95px;
+
+    cursor: pointer;
 }
 
 .cardUser {
